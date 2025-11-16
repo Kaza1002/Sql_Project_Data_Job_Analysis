@@ -87,6 +87,8 @@ Data Analyst → Senior Analyst → Analytics Director
 
 Remote-friendly positions dominate high-salary listings.
 
+<img width="1030" height="539" alt="image" src="https://github.com/user-attachments/assets/e2515be6-1d7e-4199-8665-06f30b9dce6c" />
+
 
 # 2.Skills for Top-Paying Data Analyst Jobs
 SQL Query
@@ -122,6 +124,8 @@ R, Snowflake, Pandas, Excel	~3–5
 
 These skills show employers expect data analysts to have strong programming + BI + data manipulation abilities.
 
+<img width="1031" height="640" alt="image" src="https://github.com/user-attachments/assets/27f6451e-d458-4c31-84c4-966d59883438" />
+
 
 # 3.Most In-Demand Skills for Data Analysts
 SQL Query
@@ -150,6 +154,8 @@ Tableau	3,745
 Power BI	2,609
 
 SQL + Excel + Python remain the holy trinity for analysts.
+
+<img width="294" height="286" alt="image" src="https://github.com/user-attachments/assets/175de04d-2d10-4dcb-bd89-74a6234ee10c" />
 
 
 # 4. Skills Associated With Higher Salaries
@@ -191,6 +197,8 @@ Pandas	151,821
 Elasticsearch	145,000
 
 These highlight the premium placed on big data, ML infrastructure, cloud, and dev-ops skills.
+
+<img width="344" height="517" alt="image" src="https://github.com/user-attachments/assets/483350e0-61c1-45a1-8e08-47dc7d54ce0f" />
 
 
 # 5.Most Optimal Skills to Learn (Demand × Salary)
@@ -236,6 +244,8 @@ Jira	20	104,918
 
 These represent the best skills to learn for maximum job-market value.
 
+<img width="599" height="511" alt="image" src="https://github.com/user-attachments/assets/5c7ca331-38a2-43fa-845c-293b78512497" />
+
 
 # What I Learned
 Complex Query Crafting — CTEs, joins, subqueries
@@ -270,6 +280,7 @@ Job search focus
 Career planning
 
 Continuous learning remains essential as the field evolves rapidly — and this project marks a solid step in that journey.
+
 
 
 
