@@ -2,11 +2,16 @@
 
 # Introduction
 Dive into the data job market. This project focuses on data analyst roles, exploring:
+
 Top-paying jobs
+
 In-demand skills
+
 Where skill demand meets salary potential
 
+
 All SQL queries used in this project are available in:
+
 project_sql folder
 
 # Background
@@ -195,3 +200,4 @@ Skill prioritization
 Job search focus
 Career planning
 Continuous learning remains essential as the field evolves rapidly — and this project marks a solid step in that journey.
+
