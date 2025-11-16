@@ -1,0 +1,35 @@
+/*
+Answer: What are the top skills based on salary?
+- Look at the average salary associated with each skill for Data Analyst positions
+- Focuses on roles with specified salaries, regardless of location
+- Why? It reveals how different skills impact salary levels for Data Analysts and 
+  helps identify the most financially rewarding skills to acquire or improve
+*/
+
+SELECT
+    skills,
+    Round (AVG(salary_year_avg), 0) AS avg_salary
+FROM job_postings_fact
+INNER JOIN skills_job_dim ON job_postings_fact.job_id = skills_job_dim.job_id
+INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
+WHERE
+    job_title_short = 'Data Analyst'
+    AND salary_year_avg IS NOT NULL
+    -- AND job_work_from_home = True
+GROUP BY
+    skills
+ORDER BY
+    avg_salary DESC
+LIMIT 25;
+
+
+/* 
+
+Insights — Top-Paying Data Analyst Skills (Top 25)
+-Emerging Tech Pays High: Skills like Solidity, DataRobot, and MXNet show strong demand in AI, blockchain, and automation.
+-Cloud & DevOps Tools: Terraform, VMware, and Kubernetes-related tools (like Ansible, Puppet) highlight high-paying roles integrating analytics with infrastructure.
+-ML Frameworks: Keras, PyTorch, and TensorFlow command salaries above $120K, reflecting value in machine learning expertise.
+-Data Engineering Focus: Kafka, Airflow, and Cassandra indicate that pipeline and distributed data skills are financially rewarding.
+-Collaboration Tools: GitLab, Bitbucket, and Atlassian show solid pay, reflecting their importance in analytics-driven teams.
+
+*/

@@ -1,0 +1,43 @@
+-- January
+CREATE TABLE january_jobs AS
+SELECT *
+FROM job_postings_fact
+WHERE EXTRACT(MONTH FROM job_posted_date) = 1;
+
+-- February
+CREATE TABLE february_jobs AS
+SELECT *
+FROM job_postings_fact
+WHERE EXTRACT(MONTH FROM job_posted_date) = 2;
+
+-- March
+CREATE TABLE march_jobs AS
+SELECT *
+FROM job_postings_fact
+WHERE EXTRACT(MONTH FROM job_posted_date) = 3;
+
+SELECT salary_year_avg
+from job_postings_fact;
+
+
+--
+SELECT COUNT(*) AS total_rows,
+       COUNT(salary_year_avg) AS non_null_salaries,
+       COUNT(*) - COUNT(salary_year_avg) AS null_salaries
+FROM job_postings_fact;
+
+
+--
+SELECT
+    job_title_short,
+    job_schedule_type,
+    salary_year_avg,
+    CASE
+        WHEN salary_year_avg >= 12000 THEN 'High Salary'
+        WHEN salary_year_avg BETWEEN 7000 AND 11999 THEN 'Standard Salary'
+        WHEN salary_year_avg < 7000 THEN 'Low Salary'
+        ELSE 'Not Specified'
+    END AS salary_category
+FROM job_postings_fact
+WHERE LOWER(job_title_short) LIKE '%data analyst%'
+ORDER BY salary_year_avg DESC;
