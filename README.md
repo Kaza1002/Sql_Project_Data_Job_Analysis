@@ -7,7 +7,7 @@ In-demand skills
 Where skill demand meets salary potential
 
 All SQL queries used in this project are available in:
-👉 project_sql folder
+project_sql folder
 
 # Background
 This project was born from my desire to better understand the data analyst job market—
@@ -175,10 +175,10 @@ These represent the best skills to learn for maximum job-market value.
 
 
 # What I Learned
-🧩 Complex Query Crafting — CTEs, joins, subqueries
-📊 Aggregation Mastery — COUNT(), AVG(), GROUP BY
-🔍 Real-world Analytical Thinking — turning questions into insights
-💡 End-to-End Workflow — from raw CSVs → DB → SQL → insights
+Complex Query Crafting — CTEs, joins, subqueries
+Aggregation Mastery — COUNT(), AVG(), GROUP BY
+Real-world Analytical Thinking — turning questions into insights
+End-to-End Workflow — from raw CSVs → DB → SQL → insights
 
 
 # Conclusions
