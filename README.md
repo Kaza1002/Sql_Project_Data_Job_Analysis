@@ -27,38 +27,8 @@ Salary ranges
 Locations
 
 Required skills
-
-Industry demand & salary relationships
-
-
-# Questions I set out to answer:
-What are the top-paying data analyst jobs?
-
-What skills do these high-paying jobs require?
-
-What skills are most in demand overall?
-
-Which skills are associated with higher salaries?
-
-What are the most optimal skills to learn today?
-
-
-# Tools I Used
-SQL:	Core analysis, querying, aggregations
-
-PostgreSQL: 	Database engine for structured data
-
-Visual Studio Code: 	SQL execution & project management
-
-Git & GitHub: 	Version control, sharing analysis
-
-
-# The Analysis
-Below is a breakdown of each analytical step, the SQL queries used, and the insights generated.
-
-
-# 1.Top-Paying Data Analyst Jobs
- SQL Query
+```sql
+SQL Query
 SELECT	
 	job_id,
 	job_title,
@@ -75,6 +45,7 @@ WHERE job_title_short = 'Data Analyst'
   AND salary_year_avg IS NOT NULL
 ORDER BY salary_year_avg DESC
 LIMIT 10;
+```
 
 # Key Insights
 Salaries range from $184,000 to $650,000 — massive earning potential.
@@ -91,6 +62,7 @@ Remote-friendly positions dominate high-salary listings.
 
 
 # 2.Skills for Top-Paying Data Analyst Jobs
+```sql
 SQL Query
 WITH top_paying_jobs AS (
     SELECT job_id, job_title, salary_year_avg, name AS company_name
@@ -108,6 +80,7 @@ FROM top_paying_jobs
 INNER JOIN skills_job_dim ON top_paying_jobs.job_id = skills_job_dim.job_id
 INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
 ORDER BY salary_year_avg DESC;
+```
 
 
 # Skill Breakdown (Top-Paying Roles)
@@ -128,6 +101,7 @@ These skills show employers expect data analysts to have strong programming + BI
 
 
 # 3.Most In-Demand Skills for Data Analysts
+```sql
 SQL Query
 SELECT skills, COUNT(skills_job_dim.job_id) AS demand_count
 FROM job_postings_fact
@@ -138,6 +112,7 @@ WHERE job_title_short = 'Data Analyst'
 GROUP BY skills
 ORDER BY demand_count DESC
 LIMIT 5;
+```
 
 
 # Top 5 Most Demanded Skills
@@ -159,6 +134,7 @@ SQL + Excel + Python remain the holy trinity for analysts.
 
 
 # 4. Skills Associated With Higher Salaries
+```sql
 SQL Query
 SELECT skills, ROUND(AVG(salary_year_avg), 0) AS avg_salary
 FROM job_postings_fact
@@ -170,6 +146,7 @@ WHERE job_title_short = 'Data Analyst'
 GROUP BY skills
 ORDER BY avg_salary DESC
 LIMIT 25;
+```
 
 
 # Highest-Paying Skills (Top 10)
@@ -202,6 +179,7 @@ These highlight the premium placed on big data, ML infrastructure, cloud, and de
 
 
 # 5.Most Optimal Skills to Learn (Demand × Salary)
+```sql
 SQL Query
 SELECT skills_dim.skill_id,
        skills_dim.skills,
@@ -217,6 +195,7 @@ GROUP BY skills_dim.skill_id
 HAVING COUNT(skills_job_dim.job_id) > 10
 ORDER BY avg_salary DESC, demand_count DESC
 LIMIT 25;
+```
 
 
 # Top 10 Optimal Skills (High Salary × High Demand)
@@ -268,7 +247,8 @@ Highest-Paying Skills: Tools like PySpark, Couchbase, and DataRobot command top 
 
 Optimal Skills: SQL + Cloud (AWS, Azure, Snowflake) + Big Data tools offer the best market value.
 
-#  Closing Thoughts
+Closing Thoughts:
+
 This project significantly strengthened my SQL capabilities and expanded my understanding of the data analyst job landscape.
 
 These insights provide clear guidance for:
@@ -280,6 +260,7 @@ Job search focus
 Career planning
 
 Continuous learning remains essential as the field evolves rapidly — and this project marks a solid step in that journey.
+
 
 
 
