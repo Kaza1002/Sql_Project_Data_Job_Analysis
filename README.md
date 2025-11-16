@@ -247,7 +247,7 @@ Highest-Paying Skills: Tools like PySpark, Couchbase, and DataRobot command top 
 
 Optimal Skills: SQL + Cloud (AWS, Azure, Snowflake) + Big Data tools offer the best market value.
 
-Closing Thoughts:
+# Closing Thoughts:
 
 This project significantly strengthened my SQL capabilities and expanded my understanding of the data analyst job landscape.
 
@@ -260,6 +260,7 @@ Job search focus
 Career planning
 
 Continuous learning remains essential as the field evolves rapidly — and this project marks a solid step in that journey.
+
 
 
 
